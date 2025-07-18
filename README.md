@@ -14,6 +14,7 @@
 
 - React
 - TailwindCSS
+- Shadcn UI
 
 ### Router
 
