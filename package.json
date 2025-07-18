@@ -3,12 +3,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bunx --bun vite dev",
-    "build": "bunx --bun vite build",
-    "lint": "bun run eslint . --cache",
-    "lint:inspect": "bun run eslint --inspect-config",
-    "format": "bun run prettier . --write --cache",
-    "check": "bun run lint && bun run format"
+    "dev": "vite dev",
+    "build": "vite build",
+    "lint": "eslint . --cache",
+    "lint:inspect": "eslint --inspect-config",
+    "format": "prettier . --write --cache",
+    "check": "bun -b lint && bun -b format",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
@@ -16,6 +18,7 @@
     "@types/bun": "^1.2.18",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "drizzle-kit": "^0.31.4",
     "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -30,18 +33,22 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@libsql/client": "^0.15.10",
     "@radix-ui/react-slot": "^1.2.3",
+    "@t3-oss/env-core": "^0.13.8",
     "@tailwindcss/vite": "^4.1.11",
     "@tanstack/react-router": "^1.128.3",
     "@tanstack/react-start": "^1.128.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "drizzle-orm": "^0.44.3",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11",
-    "vite": "^7.0.5"
+    "vite": "^7.0.5",
+    "zod": "^4.0.0"
   },
   "trustedDependencies": [
     "@parcel/watcher",
