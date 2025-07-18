@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore lockfile
+bun.lock
+
+# Ignore generated files
+src/routeTree.gen.ts

@@ -4,7 +4,7 @@ import {
   Outlet,
   createRootRoute,
   HeadContent,
-  Scripts,
+  Scripts
 } from "@tanstack/react-router";
 import appCss from "@/styles/app.css?url";
 
@@ -12,19 +12,19 @@ export const Route = createRootRoute({
   head: () => ({
     meta: [
       {
-        charSet: "utf-8",
+        charSet: "utf-8"
       },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1",
+        content: "width=device-width, initial-scale=1"
       },
       {
-        title: "App Template 3",
-      },
+        title: "App Template 3"
+      }
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [{ rel: "stylesheet", href: appCss }]
   }),
-  component: RootComponent,
+  component: RootComponent
 });
 
 function RootComponent() {
