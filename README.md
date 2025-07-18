@@ -27,3 +27,5 @@
 ### Tooling
 
 - Vite
+- ESLint
+- Prettier
