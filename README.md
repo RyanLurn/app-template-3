@@ -13,6 +13,7 @@
 ### UI
 
 - React
+- TailwindCSS
 
 ### Router
 
