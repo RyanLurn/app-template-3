@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "bunx --bun vite dev",
     "build": "bunx --bun vite build",
-    "lint": "bun run eslint --cache .",
+    "lint": "bun run eslint . --cache",
     "lint:inspect": "bun run eslint --inspect-config",
-    "format": "bun run prettier --write ."
+    "format": "bun run prettier . --write --cache",
+    "check": "bun run lint && bun run format"
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
